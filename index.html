@@ -4,19 +4,59 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Soundboard Spammers...</h1>
+        <h1>Soundboard Website</h1>
 
-        <p>Yeah, ik who you guys are:<br>Jose S<br>Christopher<br>Angel M and G<br>Rigo<br>Mateo<br>Pablo<br>Jesus<br>And more, but idk, oh and don't say you didn't do it, I saw ALL of your ipads</p>
+        <!-- <p>Yeah, ik who you guys are:<br>Jose S<br>Christopher<br>Angel M and G<br>Rigo<br>Mateo<br>Pablo<br>Jesus<br>And more, but idk, oh and don't say you didn't do it, I saw ALL of your ipads</p> -->
 
-        <p>Oh and by the way Leon made this!<br>You guys think someone found it online, no it was Leon.<br>I made this website to play anything on your ipads <b>AT HOME</b></p>
+        <!-- <br>You guys think someone found it online, no it was Leon.<br>I made this website to play anything on your ipads <b>AT HOME</b> -->
 
-        <p>But I left just ONE sound for you guys, only because it's my favorite</p>
+        <p>Leon made this</p>
 
-        <button onclick="playIndianSong()"></button>
+        <div id="sounds">
+            <div class="soundBtn">
+                <button onclick="playSound('indian-song')"></button>
+                <p>Indian Song</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('cursed-christmas-music')"></button>
+                <p>Cursed Christmas Music</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('loud-clash-royale')"></button>
+                <p>Clash Royale Startup</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('what-is-this-diddy-blud-doing')"></button>
+                <p>What is this diddyblud doing</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('liam-fah')"></button>
+                <p>Liam FAAH</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('indian-under-the-water')"></button>
+                <p>Hello im under da water</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('indian-christmas-song')"></button>
+                <p>Sleigh ride indian</p>
+            </div>
+
+            <div class="soundBtn">
+                <button onclick="playSound('vine-boom')"></button>
+                <p>Vine Boom</p>
+            </div>
+        </div>
 
         <script>
-            function playIndianSong() {
-                const audio = new Audio("indian-song.mp3");
+            function playSound(sound) {
+                const audio = new Audio(`${sound}.mp3`);
                 audio.play();
             }
         </script>
