@@ -1,5 +1,5 @@
 body {
-    background-color: #444444;
+    /* background-color: #444444; */
     color: white;
     align-items: center;
     text-align: center;
@@ -21,8 +21,8 @@ button {
 
 #sounds {
     display: flex;
-    flex-wrap: wrap; /* <-- This line makes the buttons wrap */
-    justify-content: center; /* optional, keeps rows centered */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .soundBtn {
@@ -40,4 +40,27 @@ iframe {
     padding: 0;
     margin: 0;
     border: none;
+}
+
+/* FIXED BUTTON IMAGE */
+#megaknight {
+    background-image: url("mog-shot.jpg");
+    background-size: cover;      /* makes the image fill the button */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat;
+    background-color: transparent; /* removes green without hiding the image */
+}
+
+.liam {
+    background-image: url("liam.png");
+    background-size: cover;      /* makes the image fill the button */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat;
+    background-color: transparent; /* removes green without hiding the image */
+}
+
+html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
 }
