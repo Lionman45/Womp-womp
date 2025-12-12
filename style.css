@@ -9,20 +9,25 @@ body {
 a {
     color: white;
     text-decoration: none;
+    background-color: lime;
+    padding: 5px;
+    border-radius: 100px;
+    margin: 10px;
 }
 
 button {
     background-color: #0f0;
     border-radius: 100%;
-    width: 125px;
-    aspect-ratio: 8/7;
-    border: #222 solid 10px;
+    width: 75px;
+    aspect-ratio: 9/8;
+    border: #222 solid 5px;
 }
 
 #sounds {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 100vh;
 }
 
 .soundBtn {
@@ -32,6 +37,7 @@ button {
 .soundBtn p {
     font-weight: bolder;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-small;
 }
 
 iframe {
@@ -58,6 +64,22 @@ iframe {
     background-repeat: no-repeat;
     background-color: transparent; /* removes green without hiding the image */
 }
+/*
+.adrian {
+    background-image: url("adrian.jpg");
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: transparent; 
+}
+.dylan {
+    background-image: url("dylan.jpg");
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: transparent; 
+}
+*/
 
 html {
   height: 100%;
