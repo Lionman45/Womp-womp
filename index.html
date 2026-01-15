@@ -33,7 +33,10 @@
                 "sad-meow-song",
                 "baby-laughing-meme",
                 "bruh",
-                "i-farted-in-my-grandpas-breathing-machine"
+                "i-farted-in-my-grandpas-breathing-machine",
+                "nuclear-diarrhea",
+                "domer",
+                "shooting-stars"
             ],
             "Loud SFX": [
                 "cursed-christmas-music",
@@ -74,6 +77,13 @@
             new Audio(sound + ".mp3").play();
         }
 
+        // LOUD MODE — 10x, 0.01s delay
+        function playSoundLoud(sound) {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => playSound(sound), i * 1);
+            }
+        }
+
         // 😈 TRUE SIMULTANEOUS PLAY (TWICE)
         function playAllSoundsTwice() {
             const allSounds = [];
@@ -82,10 +92,8 @@
                 allSounds.push(...sounds[category]);
             }
 
-            // FIRST BLAST — all at once
             allSounds.forEach(sound => playSound(sound));
 
-            // SECOND BLAST — 0.1s later
             setTimeout(() => {
                 allSounds.forEach(sound => playSound(sound));
             }, 100);
@@ -114,10 +122,23 @@
                 if (sound.includes("dylan")) btn.classList.add("dylan");
                 if (sound.includes("matias")) btn.id = "megaknight";
 
+                const loudBtn = document.createElement("button");
+                loudBtn.textContent = "LOUD";
+                loudBtn.style.display = "block";      // 👈 KEY FIX
+                loudBtn.style.margin = "6px auto 0";
+                loudBtn.style.backgroundColor = "#007bff";
+                loudBtn.style.color = "white";
+                loudBtn.style.border = "none";
+                loudBtn.style.borderRadius = "20px";
+                loudBtn.style.padding = "4px 14px";
+                loudBtn.style.cursor = "pointer";
+                loudBtn.onclick = () => playSoundLoud(sound);
+
                 const label = document.createElement("p");
                 label.textContent = formatName(sound);
 
                 wrap.appendChild(btn);
+                wrap.appendChild(loudBtn);
                 wrap.appendChild(label);
                 container.appendChild(wrap);
             });
