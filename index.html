@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meme Sounds</title>
+    <title>Google Docs</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="https://blooket.almotek.co.za">New Link!</a>
+    <!-- <a href="https://blooket.almotek.co.za">New Link!</a> -->
 
     <div style="margin: 20px;">
-        <button id="playAllBtn">PLAY EVERYTHING 😈</button>
+        <button id="playAllBtn">Play All</button>
     </div>
 
-    <!-- THIS MUST EXIST -->
     <div id="soundboard"></div>
 
     <iframe src="https://blooket.almotek.co.za/uv.html?site=gamesnacks.com/games/99balls3d"></iframe>
 
-    <!-- SCRIPT AT BOTTOM = 100% SAFE -->
     <script>
         const sounds = {
             "Funny SFX": [
@@ -36,7 +34,12 @@
                 "i-farted-in-my-grandpas-breathing-machine",
                 "nuclear-diarrhea",
                 "domer",
-                "shooting-stars"
+                "shooting-stars",
+                "nyo-nyo-nyo-nyo-nyo",
+                "smoke-detector-beep",
+                "tripped-on-a-wire",
+                "my-mommy-said-no-more-skibidi-toilet",
+                "please-speed-i-need-this"
             ],
             "Loud SFX": [
                 "cursed-christmas-music",
@@ -47,7 +50,8 @@
                 "lack-of-a-father-figure",
                 "your-phone-is-ringing-pick-it-up-now",
                 "metal-pipe-clang",
-                "sad-violin"
+                "sad-violin",
+                "fnaf-jumpscare"
             ],
             "School SFX": [
                 "liam-fah",
@@ -62,7 +66,8 @@
                 "italian-brainrot-ringtone",
                 "rizz-sound-effect",
                 "we-are-charlie-kirk",
-                "galaxy-meme"
+                "galaxy-meme",
+                "city-boy"
             ]
         };
 
@@ -72,19 +77,16 @@
                 .replace(/\b\w/g, c => c.toUpperCase());
         }
 
-        // KEEP BUG / FEATURE
         function playSound(sound) {
             new Audio(sound + ".mp3").play();
         }
 
-        // LOUD MODE — 10x, 0.01s delay
         function playSoundLoud(sound) {
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => playSound(sound), i * 1);
             }
         }
 
-        // 😈 TRUE SIMULTANEOUS PLAY (TWICE)
         function playAllSoundsTwice() {
             const allSounds = [];
 
@@ -123,10 +125,10 @@
                 if (sound.includes("matias")) btn.id = "megaknight";
 
                 const loudBtn = document.createElement("button");
-                loudBtn.textContent = "LOUD";
-                loudBtn.style.display = "block";      // 👈 KEY FIX
+                loudBtn.textContent = "Loud";
+                loudBtn.style.display = "block";
                 loudBtn.style.margin = "6px auto 0";
-                loudBtn.style.backgroundColor = "#007bff";
+                loudBtn.style.background = "linear-gradient(135deg, #667eea, #764ba2)";
                 loudBtn.style.color = "white";
                 loudBtn.style.border = "none";
                 loudBtn.style.borderRadius = "20px";
